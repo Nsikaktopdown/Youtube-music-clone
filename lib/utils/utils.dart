@@ -14,6 +14,13 @@ mixin Utils {
     return Base64Decoder().convert(image);
   }
 
+  static double getDeviceHeight(BuildContext context) {
+    return MediaQuery.of(context).size.height;
+  }
+  static double getDeviceWidth(BuildContext context) {
+    return MediaQuery.of(context).size.width;
+  }
+
   static Future<void> progressDialog(BuildContext context,
       {String message = ''}) {
     return showDialog(

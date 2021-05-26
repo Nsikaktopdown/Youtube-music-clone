@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:youtube_music_clone/user/features/home/presentation/home.dart';
+import 'package:youtube_music_clone/user/features/home/presentation/parent-navs.dart';
 import 'package:youtube_music_clone/user/features/splash/splash.dart';
 
 class RouteGenerator {
@@ -16,6 +17,11 @@ class RouteGenerator {
       case HomePage.id:
         return MaterialPageRoute(
           builder: (_) => HomePage(),
+        );
+
+        case ParentNavs.id:
+        return MaterialPageRoute(
+          builder: (_) => ParentNavs(),
         );
      
         // If args is not of the correct type, return an error page.
