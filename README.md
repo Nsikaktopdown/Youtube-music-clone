@@ -1,9 +1,9 @@
-# Herme App
+# Youtube music clone
 
 
 ## Getting Started
 
-This project is for package delivery by the gods.
+This project is a clone of Google Youtube music using flutter
 
 A few resources to get you started if this is your first Flutter project:
 
