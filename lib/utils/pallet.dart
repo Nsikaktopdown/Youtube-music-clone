@@ -36,13 +36,13 @@ class Pallet {
   static Color colorSecondary = Color(0xFF555555);
   static Color colorPrimaryDark = Color(0xFF016FC8);
   static Color ltBlack = Colors.black;
-  static Color textDark = Color(0xFF2D3448);
-  static Color textLight = Color(0xFF9DA9BB);
+  static Color textDark = Color(0xFFF8F8F7);
+  static Color textLight = Color(0xFFB1B1B0);
   static Color divider = Color(0xFFE6EDF5);
   static Color yellow = Color(0xFFE2BE00);
 
   static void _loadLightColors() {
-    mainColor = Color(0xFF3F3F9D);
+    mainColor = Color(0xFF1D1D1D);
     mainColorWithWhite = white;
     mainDarkColor = ltBlack;
     mainLightColor = Color(0xFFE5E5E5);
@@ -52,7 +52,7 @@ class Pallet {
     editTextColor = Color(0xFFE0E7FF);
     editTextDividerColor = Color(0xFFE0E7FF);
     appBarColor = mainColor;
-    backgroundColor = Color(0xFFF5F5F8);
+    backgroundColor = Color(0xFF000000);
     cardBackground = white;
     paymentOptionBackground = Color(0xFFFAFAFA);
     newItemBackgroundColor = Color(0xFFF1F4FF);

@@ -25,9 +25,11 @@ class MyApp extends StatelessWidget {
             // or simply save your changes to "hot reload" in a Flutter IDE).
             // Notice that the counter didn't reset back to zero; the application
             // is not restarted.
+            brightness: Brightness.dark,
+            canvasColor: Colors.white,
             primaryColor: Pallet.mainColor,
             accentColor: Pallet.mainColor,
-            fontFamily: 'NoirPro'),
+            fontFamily: 'OpenSans'),
         home: SplashScreenPage(),
         onGenerateRoute: RouteGenerator.generateRoute);
   }

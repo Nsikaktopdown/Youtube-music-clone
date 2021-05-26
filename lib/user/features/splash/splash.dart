@@ -1,9 +1,8 @@
-
+import 'package:youtube_music_clone/user/features/home/presentation/home.dart';
 import 'package:youtube_music_clone/utils/pallet.dart';
 import 'package:youtube_music_clone/utils/role.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 
 class SplashScreenPage extends StatefulWidget {
   @override
@@ -11,12 +10,12 @@ class SplashScreenPage extends StatefulWidget {
 }
 
 class SplashScreenState extends State {
- // final repository = UserModuleInjector.resolve<UserRepository>();
+  // final repository = UserModuleInjector.resolve<UserRepository>();
 
   @override
   void initState() {
     new Future.delayed(const Duration(milliseconds: 1000), () {
-      //checkUserLoginStatus();
+      Navigator.pushNamed(context, HomePage.id);
     });
   }
 
@@ -26,7 +25,10 @@ class SplashScreenState extends State {
       backgroundColor: Pallet.mainColor,
       body: SafeArea(
         child: Container(
-          child: Center(child: Text("Hermes")),
+          child: Center(
+              child: Text("Youtube Music Clone",
+                  style: TextStyle(
+                      color: Pallet.textDark, fontWeight: FontWeight.w700))),
         ),
       ),
     );
