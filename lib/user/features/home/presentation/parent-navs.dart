@@ -28,6 +28,7 @@ class _ParentNavsState extends State {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Pallet.mainColor,
         body: PageView(
           controller: _pageController,
           onPageChanged: (index) {

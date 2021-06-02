@@ -65,10 +65,7 @@ dependencies:
   shimmer: ^1.1.1
   pin_entry_text_field: ^0.1.4
   modal_progress_hud:
-  share:
-    git:
-      url: git://github.com/himanshusharma89/plugins.git
-      path: packages/share
+  device_info:    ^2.0.0
   path_provider: ^1.6.11
   flutter_rating_bar: ^3.0.1+1
  

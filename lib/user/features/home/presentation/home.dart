@@ -4,6 +4,7 @@ import 'package:youtube_music_clone/user/features/home/presentation/music-item.d
 import 'package:youtube_music_clone/user/features/home/presentation/music-model.dart';
 import 'package:youtube_music_clone/utils/pallet.dart';
 import 'package:youtube_music_clone/utils/utils.dart';
+import 'package:youtube_music_clone/utils/constant.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = "/homepage";
@@ -13,9 +14,11 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State {
   List<MusicModel> musicList = [];
+  bool isTablet = false;
   @override
   void initState() {
     // TODO: implement initState
+
     super.initState();
     musicList.add(MusicModel(
         title: "At My Worst (feat. Kehlani)",
@@ -30,7 +33,7 @@ class HomePageState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Pallet.backgroundColor,
+      backgroundColor: Pallet.mainColor,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Pallet.mainColor,
@@ -38,7 +41,7 @@ class HomePageState extends State {
           child: Row(
             children: [
               SvgPicture.asset(
-                "assets/images/movie-fill.svg",
+                "${Constant.IMAGE_DIR}movie-fill.svg",
                 height: 30,
                 width: 30,
               ),
@@ -59,6 +62,7 @@ class HomePageState extends State {
       ),
       body: SafeArea(
           child: Container(
+              color: Pallet.backgroundColor,
               padding: EdgeInsets.all(20),
               child: ListView(
                 children: [
@@ -116,7 +120,9 @@ class HomePageState extends State {
 
   Widget _listItem() {
     return Container(
-        height: Utils.getDeviceHeight(context) / 3,
+        height: Utils.isLandscape(context)
+            ? Utils.getDeviceHeight(context) / 1.5
+            : Utils.getDeviceHeight(context) / 3,
         width: Utils.getDeviceWidth(context) / 1.5,
         margin: EdgeInsets.only(bottom: 10, top: 20),
         child: ListView.builder(

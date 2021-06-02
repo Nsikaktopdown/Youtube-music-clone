@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
             canvasColor: Colors.white,
             primaryColor: Pallet.mainColor,
             accentColor: Pallet.mainColor,
+            primaryColorDark: Pallet.mainColor,
             fontFamily: 'OpenSans'),
         home: SplashScreenPage(),
         onGenerateRoute: RouteGenerator.generateRoute);
