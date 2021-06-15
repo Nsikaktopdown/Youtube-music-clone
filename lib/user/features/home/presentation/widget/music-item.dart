@@ -6,8 +6,9 @@ import 'package:youtube_music_clone/utils/pallet.dart';
 import 'package:youtube_music_clone/utils/utils.dart';
 
 class MusicItem extends StatelessWidget {
-  MusicModel music;
-  MusicItem(this.music);
+  final MusicModel music;
+  final Function onClick;
+  MusicItem({this.music, this.onClick});
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -20,19 +21,21 @@ class MusicItem extends StatelessWidget {
             Container(
                 child: Stack(
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.asset(
-                    "${Constant.IMAGE_DIR}${music.image}",
-                    fit: BoxFit.cover,
-                    height: Utils.isLandscape(context)
-                        ? Utils.getDeviceHeight(context) / 2
-                        : Utils.getDeviceHeight(context) / 4.5,
-                    width: Utils.isLandscape(context)
-                        ? Utils.getDeviceWidth(context) / 3
-                        : Utils.getDeviceWidth(context) / 2,
-                  ),
-                ),
+                InkWell(
+                    onTap: onClick,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        "${Constant.IMAGE_DIR}${music.image}",
+                        fit: BoxFit.cover,
+                        height: Utils.isLandscape(context)
+                            ? Utils.getDeviceHeight(context) / 2
+                            : Utils.getDeviceHeight(context) / 4.5,
+                        width: Utils.isLandscape(context)
+                            ? Utils.getDeviceWidth(context) / 3
+                            : Utils.getDeviceWidth(context) / 2,
+                      ),
+                    )),
                 Positioned.fill(
                     child: Align(
                         alignment: Alignment.center,

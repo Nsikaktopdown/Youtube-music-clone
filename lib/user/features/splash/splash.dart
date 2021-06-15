@@ -1,5 +1,5 @@
 import 'package:youtube_music_clone/user/features/home/presentation/home.dart';
-import 'package:youtube_music_clone/user/features/home/presentation/parent-navs.dart';
+import 'package:youtube_music_clone/user/features/home/presentation/widget/parent-navs.dart';
 import 'package:youtube_music_clone/utils/pallet.dart';
 import 'package:youtube_music_clone/utils/role.dart';
 import 'package:flutter/cupertino.dart';

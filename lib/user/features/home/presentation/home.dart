@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:youtube_music_clone/user/features/home/presentation/music-item.dart';
+import 'package:youtube_music_clone/user/features/home/presentation/widget/music-item.dart';
 import 'package:youtube_music_clone/user/features/home/presentation/music-model.dart';
+import 'package:youtube_music_clone/user/features/player/presentation/player_page.dart';
 import 'package:youtube_music_clone/utils/pallet.dart';
 import 'package:youtube_music_clone/utils/utils.dart';
 import 'package:youtube_music_clone/utils/constant.dart';
@@ -132,7 +133,12 @@ class HomePageState extends State {
             itemCount: musicList.length,
             itemBuilder: (BuildContext context, int position) {
               return GestureDetector(
-                  onTap: () => {}, child: MusicItem(musicList[position]));
+                  onTap: () => {},
+                  child: MusicItem(
+                      music: musicList[position],
+                      onClick: () {
+                        Navigator.pushNamed(context, PlayerPage.id);
+                      }));
             }));
   }
 }

@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:youtube_music_clone/user/features/home/presentation/home.dart';
-import 'package:youtube_music_clone/user/features/home/presentation/parent-navs.dart';
+import 'package:youtube_music_clone/user/features/home/presentation/widget/parent-navs.dart';
+import 'package:youtube_music_clone/user/features/player/presentation/player_page.dart';
 import 'package:youtube_music_clone/user/features/splash/splash.dart';
 
 class RouteGenerator {
@@ -23,7 +24,10 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => ParentNavs(),
         );
-     
+      case PlayerPage.id:
+        return MaterialPageRoute(
+          builder: (_) =>PlayerPage(),
+        );
         // If args is not of the correct type, return an error page.
         // You can also throw an exception while in development.
         return _errorRoute();

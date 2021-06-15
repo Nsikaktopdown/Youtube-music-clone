@@ -43,6 +43,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.5.0"
+  audio_manager:
+    dependency: "direct main"
+    description:
+      name: audio_manager
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.8.1"
   barcode_scan:
     dependency: "direct main"
     description:
